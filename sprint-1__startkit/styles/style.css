@@ -1,3 +1,20 @@
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body{
+  overflow-x: hidden;
+}
+
+
+
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -59,6 +76,11 @@
   position: absolute;
   right: 0px;
   top: 64px;
+
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+
+  animation: rotateClockwise 20s linear infinite;
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -81,6 +103,12 @@
   align-items: center;
   
 }
+
+
+
+
+
+
 
 .two-columns{
   display: flex;
@@ -115,6 +143,167 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
+}
+
+
+
+.techniques{
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #1f1f1f 1px;
+  margin-top: 100px;
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрирует по вертикали */
+  align-items: center; /* Центрирует элементы по горизонтали */
+}
+
+.section-title{
+  border: solid #1f1f1f 1px;
+  width: 60%;
+  margin-top: 100px;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.section-subtitle{
+  border: solid #1f1f1f 1px;
+  width: 60%;
+  margin-top: 20px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.cards{
+  border: solid #1f1f1f 1px;
+  position: relative;
+  width: 920px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки */
+  gap: 100px; /* Уменьшаем отступ */
+}
+
+.cards-item{
+  gap: 100px;
+  
+}
+
+
+
+.cards-image{
+  width: 160px;
+  height: 160px;
+  margin-top: 60px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.cards-title{
+  margin-top: 43px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cards-description{
+  margin-top: 16px;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+.video{
+  border: solid #1f1f1f 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-video{
+  border: solid #1f1f1f 1px;
+  padding-top: 50px;
+  margin-bottom: 100px;
+  display: flex;
+  gap: 20px; /* Промежуток между iframe */
+  justify-content: center;
+}
+
+
+
+.khan{
+  background-color: #f2f2f2;
+  padding-top: 105px;
+}
+
+.khan-container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.khan-author{
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan-title{
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.khan-quote{
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 790px;
+  margin-top: 50px;
+}
+
+.khan-quote-author{
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 36px;
+}
+
+.khan-quote-author-subline{
+  margin-top: 10px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan-book-container{
+  margin-top: 68px;
+  display: flex;
+  flex-direction: row;
+  gap:48px;
+}
+
+.khan-book-pic{
+  object-fit: cover;
+}
+
+.khan-buy-link{
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
 }
 
 
@@ -290,6 +479,11 @@
   width: 877px; 
   height: 700px; 
   z-index: 1; 
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+
+  animation: rotateClockwise 20s linear infinite;
+
 }
 
 .section-title__theme_dark,
@@ -298,6 +492,33 @@
 .table_theme_dark2 {
   z-index: 3; /* Поместить текст поверх картинки */
 }
+
+.resources{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  
+}
+
+.logo-zone{
+  width: 1100px;
+  margin-bottom: 217px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items:space-between;
+
+}
+.resources-link{
+  width: 270px;
+  height: 38px;
+}
+
+
+
 .footer{
   min-height: 350px;
   background-color: #1f1f1f;
